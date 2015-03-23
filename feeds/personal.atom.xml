@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jorgicio's Crib</title><link href="http://jorgicio.github.io/" rel="alternate"></link><link href="http://jorgicio.github.io/feeds/personal.atom.xml" rel="self"></link><id>http://jorgicio.github.io/</id><updated>2015-03-22T22:47:00-03:00</updated><entry><title>My first post here</title><link href="http://jorgicio.github.io/my-first-post-here.html" rel="alternate"></link><updated>2015-03-22T22:47:00-03:00</updated><author><name>Jorgicio</name></author><id>tag:jorgicio.github.io,2015-03-22:my-first-post-here.html</id><summary type="html">&lt;p&gt;&lt;code&gt;Hello, World!&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Or so it must begin. Anyway.&lt;/p&gt;
+&lt;p&gt;I'm starting this alternative blog because I want to try the benefits of &lt;a href="http://blog.getpelican.com"&gt;Pelican&lt;/a&gt;, a blog-oriented platform made in Python, what's my favourite programming language. Also, I want to improve my practice in English, so I'll write the posts in that language. Maybe I'll include some other languages, specially Spanish, my mother tongue.&lt;/p&gt;
+&lt;p&gt;If you wait for a description about myself, it won't be here, but in a page that will be available... soon. Meanwhile, you can watch everything about me in &lt;a href="http://www.jorgicio.net"&gt;my personal site&lt;/a&gt; (in Spanish).&lt;/p&gt;
+&lt;p&gt;As I may learn about this, and having some break, I'll be posting here.&lt;/p&gt;
+&lt;p&gt;Thanks for reading. Any suggestions are welcome.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Jorgicio&lt;/em&gt;&lt;/p&gt;</summary><category term="python"></category><category term="personal"></category></entry></feed>
