@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jorgicio's Crib</title><link href="http://jorgicio.github.io/" rel="alternate"></link><link href="http://jorgicio.github.io/feeds/personal.atom.xml" rel="self"></link><id>http://jorgicio.github.io/</id><updated>2015-03-24T00:47:00-03:00</updated><entry><title>Back to the origins</title><link href="http://jorgicio.github.io/back-to-the-origins.html" rel="alternate"></link><updated>2015-03-24T00:47:00-03:00</updated><author><name>Jorgicio</name></author><id>tag:jorgicio.github.io,2015-03-24:back-to-the-origins.html</id><summary type="html">&lt;figure&gt;
-&lt;img src="http://jorgicio.github.io/images/iquique_family.jpg" width="360" title="My northern family" /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jorgicio's Crib</title><link href="/" rel="alternate"></link><link href="/feeds/personal.atom.xml" rel="self"></link><id>/</id><updated>2015-03-24T00:47:00-03:00</updated><entry><title>Back to the origins</title><link href="/back-to-the-origins.html" rel="alternate"></link><updated>2015-03-24T00:47:00-03:00</updated><author><name>Jorgicio</name></author><id>tag:,2015-03-24:back-to-the-origins.html</id><summary type="html">&lt;figure&gt;
+&lt;img src="/images/iquique_family.jpg" width="360" title="My northern family" /&gt;
 &lt;figcaption&gt;My northern family&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -20,7 +20,7 @@
 &lt;p&gt;As I want to go again, I hope it'd be for a month. And in aeroplane.&lt;/p&gt;
 &lt;p&gt;All my family (in both sides, maternal and fraternal) is very awesome. And things like that, make me worth them all.&lt;/p&gt;
 &lt;p&gt;XOXO.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Jorgicio&lt;/em&gt;&lt;/p&gt;</summary><category term="personal"></category><category term="jorgicio"></category><category term="iquique"></category></entry><entry><title>My first post here</title><link href="http://jorgicio.github.io/my-first-post-here.html" rel="alternate"></link><updated>2015-03-22T22:47:00-03:00</updated><author><name>Jorgicio</name></author><id>tag:jorgicio.github.io,2015-03-22:my-first-post-here.html</id><summary type="html">&lt;p&gt;&lt;code&gt;Hello, World!&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Jorgicio&lt;/em&gt;&lt;/p&gt;</summary><category term="personal"></category><category term="jorgicio"></category><category term="iquique"></category></entry><entry><title>My first post here</title><link href="/my-first-post-here.html" rel="alternate"></link><updated>2015-03-22T22:47:00-03:00</updated><author><name>Jorgicio</name></author><id>tag:,2015-03-22:my-first-post-here.html</id><summary type="html">&lt;p&gt;&lt;code&gt;Hello, World!&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Or so it must begin. Anyway.&lt;/p&gt;
 &lt;p&gt;I'm starting this alternative blog because I want to try the benefits of &lt;a href="http://blog.getpelican.com"&gt;Pelican&lt;/a&gt;, a blog-oriented platform made in Python, what's my favourite programming language. Also, I want to improve my practice in English, so I'll write the posts in that language. Maybe I'll include some other languages, specially Spanish, my mother tongue.&lt;/p&gt;
 &lt;p&gt;If you wait for a description about myself, it won't be here, but in a page that will be available... soon. Meanwhile, you can watch everything about me in &lt;a href="http://www.jorgicio.net"&gt;my personal site&lt;/a&gt; (in Spanish).&lt;/p&gt;
