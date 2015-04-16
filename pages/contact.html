@@ -70,11 +70,16 @@
   
   <div>
     <p>Hi!</p>
-<p>If you want to contact me, just write to my email:</p>
-<p>jpizarro at inf dot utfsm dot cl</p>
-<p>Or:</p>
-<p>thirteenth dot step dot 1707 at gmail dot com</p>
-<p>Contact form available soon!</p>
+<p>If you want to contact me, <strong>just fill the fields below</strong>.
+<form method="POST" action="//formspree.io/thirteenth.step.1707@gmail.com">
+    Name: <input type="text" name="name"/><br>
+    E-Mail: <input type="text" name="email"/><br>
+    Website: <input type="text" name="website"/><br>
+    Message:<br>
+    <textarea rows="7" cols="100">
+    </textarea><br>
+    <input type="submit" name="send" value="Send that!" /> <input type="reset" name="reset" value="Reset that!" />
+</form></p>
   </div>
           </div>
 
