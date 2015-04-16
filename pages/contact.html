@@ -73,12 +73,13 @@
 <p>If you want to contact me, <strong>just fill the fields below</strong>.
 <form method="POST" action="//formspree.io/thirteenth.step.1707@gmail.com">
     Name: <input type="text" name="name"/><br>
-    E-Mail: <input type="text" name="email"/><br>
+    E-Mail: <input type="email" name="_replyto"/><br>
     Website: <input type="text" name="website"/><br>
+    <input type="hidden" name="_subject" value="Hi! Someone wants to greet you!" />
     Message:<br>
     <textarea rows="7" cols="100">
     </textarea><br>
-    <input type="submit" name="send" value="Send that!" /> <input type="reset" name="reset" value="Reset that!" />
+    <input type="submit" name="send" value="Send" /> <input type="reset" name="reset" value="Reset that!" />
 </form></p>
   </div>
           </div>
