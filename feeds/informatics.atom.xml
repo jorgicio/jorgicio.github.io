@@ -4,17 +4,21 @@
     &lt;figcaption&gt;The Spanish Dvorak Keyboard.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;I'm a &lt;a href="http://en.wikipedia.org/wiki/Dvorak_Keyboard"&gt;Dvorak keyboard&lt;/a&gt; user since November, 2014. Exactly, the same day &lt;a href="http://en.wikipedia.org/wiki/Chespirito"&gt;Chespirito&lt;/a&gt; died. And since that, I had to do some modifications in my daily life. As expected, in the first days, I experienced some clumsiness; but now, I'm more experienced than before. However, there are things I noticed:
-&lt;em&gt; I still mistake between the keys "n" and "s", "m" and "w", and the combinations "tr" and "rt". Or some keys besides them.
-&lt;/em&gt; If you compare between the Spanish Dvorak, and the standard one, will notice the keys "h" and "r" are swapped.
-&lt;em&gt; I can't do the "asdf" combination anymore. Or some similar combinations that use those keys, just for leisure.
-&lt;/em&gt; The "wasd" combination is now ",aoe". It's weird to use a punctuation mark as an arrow key.
-&lt;em&gt; You can read the "&lt;abbr title="&amp;quot;Conchetumadre&amp;quot;, the Chilean counterpart of &amp;quot;Motherfucker&amp;quot;."&gt;CTM&lt;/abbr&gt;" keys across the rows. If you're Chilean, may get the joke.&lt;/em&gt; The key "a" never moved when switching between one layout and another. Just compare the QWERTY and the DVORAK ones.
-&lt;em&gt; As well-known, vowels are in the 2nd row, and are the first 5 keys there.
-&lt;/em&gt; There's no a Latam variant for the Dvorak Keyboard... &lt;a href="https://github.com/flobosg/latam-dvorak"&gt;yet&lt;/a&gt;.
-&lt;em&gt; And yes... indeed, typing is faster than QWERTY.
-&lt;/em&gt; If you want to try this layout, try to do it when you have some free time.
-&lt;em&gt; &lt;abbr title="GRand Unified Boot. The bootloader for GNU/Linux."&gt;GRUB&lt;/abbr&gt; only works with QWERTY... unless I may do some some tweak.&lt;/em&gt; Now I'm clumsy at re-using a QWERTY keyboard when available. Yes, it's something I have to deal. You know, everything moves around the QWERTY one.
-&lt;em&gt; The "XD" emoticon requires some elongation in the fingers. But nothing impossible to do.
-&lt;/em&gt; Dvorak is for hipsters. QWERTY? Too mainstream!&lt;/p&gt;
+&lt;p&gt;I'm a &lt;a href="http://en.wikipedia.org/wiki/Dvorak_Keyboard"&gt;Dvorak keyboard&lt;/a&gt; user since November, 2014. Exactly, the same day &lt;a href="http://en.wikipedia.org/wiki/Chespirito"&gt;Chespirito&lt;/a&gt; died. And since that, I had to do some modifications in my daily life. As expected, in the first days, I experienced some clumsiness; but now, I'm more experienced than before. However, there are things I noticed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I still mistake between the keys "n" and "s", "m" and "w", and the combinations "tr" and "rt". Or some keys besides them.&lt;/li&gt;
+&lt;li&gt;If you compare between the Spanish Dvorak, and the standard one, will notice the keys "h" and "r" are swapped.&lt;/li&gt;
+&lt;li&gt;I can't do the "asdf" combination anymore. Or some similar combinations that use those keys, just for leisure.&lt;/li&gt;
+&lt;li&gt;The "wasd" combination is now ",aoe". It's weird to use a punctuation mark as an arrow key.&lt;/li&gt;
+&lt;li&gt;You can read the "&lt;abbr title="&amp;quot;Conchetumadre&amp;quot;, the Chilean counterpart of &amp;quot;Motherfucker&amp;quot;."&gt;CTM&lt;/abbr&gt;" keys across the rows. If you're Chilean, may get the joke.&lt;/li&gt;
+&lt;li&gt;The key "a" never moved when switching between one layout and another. Just compare the QWERTY and the DVORAK ones.&lt;/li&gt;
+&lt;li&gt;As well-known, vowels are in the 2nd row, and are the first 5 keys there.&lt;/li&gt;
+&lt;li&gt;There's no a Latam variant for the Dvorak Keyboard... &lt;a href="https://github.com/flobosg/latam-dvorak"&gt;yet&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;And yes... indeed, typing is faster than QWERTY.&lt;/li&gt;
+&lt;li&gt;If you want to try this layout, try to do it when you have some free time.&lt;/li&gt;
+&lt;li&gt;&lt;abbr title="GRand Unified Boot. The bootloader for GNU/Linux."&gt;GRUB&lt;/abbr&gt; only works with QWERTY... unless I may do some some tweak.&lt;/li&gt;
+&lt;li&gt;Now I'm clumsy at re-using a QWERTY keyboard when available. Yes, it's something I have to deal. You know, everything moves around the QWERTY one.&lt;/li&gt;
+&lt;li&gt;The "XD" emoticon requires some elongation in the fingers. But nothing impossible to do.&lt;/li&gt;
+&lt;li&gt;Dvorak is for hipsters. QWERTY? Too mainstream!&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;So if you want to try a Dvorak layout, may not regret that. But try to not forget what learned with QWERTY, because you'll need it in some time in the (not so far) future.&lt;/p&gt;</summary><category term="dvorak"></category><category term="keyboard"></category><category term="qwerty"></category></entry></feed>
