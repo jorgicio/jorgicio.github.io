@@ -83,7 +83,7 @@
 <p>Luckily, the GTK 3.0 ebuild for Gentoo (and based ones) contains the epatch_user instruction, so we can just put our own patches, and let Emerge do the rest of the part. </p>
 <p><em><strong>Note:</strong> If you use any other Linux distro, you can do this too, but must patch manually, and re-compile the package from the source. Ask for the way to do for you distro.</em></p>
 <p>First, download <a href="http://www.jorgicio.net/docs/gtk3nocsd/gtk_3.14_disable_csd_envvar_20141001.patch">this patch</a>, and put it inside:</p>
-<p><code>/etc/portage/x11-misc/gtk+:3</code></p>
+<p><code>/etc/portage/x11-misc/gtk+:3/</code></p>
 <p>Create those directories if not existing.</p>
 <p>Then, recompile the GTK +3 package:</p>
 <p><code>emerge -1 gtk+:3</code></p>
@@ -91,7 +91,7 @@
 <p>Meanwhile, add the right environment variable. You have 2 ways:</p>
 <ol>
 <li>As a system variable, download <a href="http://www.jorgicio.net/docs/gtk3nocsd/gtk3csd.sh">this file</a>, and put it inside <code>/etc/profile.d/</code>. Also, if needed, add execution permissions.</li>
-<li>As a user variable. open the .profile or .xprofile file (create in if not available), and add the following line:
+<li>As a user variable. open the .profile or .xprofile file (create it if not available), and add the following line:
 <code>export GTK_DISABLE_CSD=1</code></li>
 </ol>
 <p>For any of those, restart the session after GTK+ 3 compiled successfully.</p>
