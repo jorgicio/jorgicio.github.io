@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
 
-    <title>  Living with Dvorak, the keyboard
+    <title>  Disable GTK+ 3 CSD in non-GTK+3 desktops (e.g. MATE or XFCE)
  | Jorgicio's Crib</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -29,7 +29,7 @@
 
     <!-- Feeds -->
       <link href="http://jorgicio.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jorgicio&#39;s Crib Full Atom Feed"/>
-      <link href="http://jorgicio.github.io/feeds/informatics.atom.xml" type="application/atom+xml" rel="alternate" title="Jorgicio&#39;s Crib Categories Atom Feed"/>
+      <link href="http://jorgicio.github.io/feeds/linux.atom.xml" type="application/atom+xml" rel="alternate" title="Jorgicio&#39;s Crib Categories Atom Feed"/>
 
 
   </head>
@@ -64,7 +64,7 @@
         <div class="row">
           <div class=" span9  ">
   <h1>
-    <a href="http://jorgicio.github.io/living-with-dvorak-the-keyboard.html" rel="bookmark" title="Permalink to Living with Dvorak, the keyboard">Living with Dvorak, the keyboard</a>
+    <a href="http://jorgicio.github.io/disable-gtk+-3-csd-in-non-gtk+3-desktops.html" rel="bookmark" title="Permalink to Disable GTK+ 3 CSD in non-GTK+3 desktops (e.g. MATE or XFCE)">Disable GTK+ 3 CSD in non-GTK+3 desktops (e.g. MATE or XFCE)</a>
   </h1>
           </div>
         </div>
@@ -76,30 +76,29 @@
   
 
   <div>
-    <figure>
-    <img src="http://jorgicio.github.io/images/dvorak_spanish.png" title="Dvorak Spanish" >
-    <figcaption>The Spanish Dvorak Keyboard.</figcaption>
-</figure>
-
-<p>I'm a <a href="http://en.wikipedia.org/wiki/Dvorak_Keyboard">Dvorak keyboard</a> user since November, 2014. Exactly, the same day <a href="http://en.wikipedia.org/wiki/Chespirito">Chespirito</a> died. And since that, I had to do some modifications in my daily life. As expected, in the first days, I experienced some clumsiness; but now, I'm more experienced than before. However, there are things I noticed:</p>
-<ul>
-<li>I still mistake between the keys "n" and "s", "m" and "w", and the combinations "tr" and "rt". Or some keys besides them.</li>
-<li>If you compare between the Spanish Dvorak, and the standard one, will notice "h" and "r" keys are swapped.</li>
-<li>I can't do the "asdf" combination anymore. Or some similar combinations that use those keys, just for leisure.</li>
-<li>The "wasd" combination is now ",aoe". It's weird to use a punctuation mark as an arrow key.</li>
-<li>You can read the "<abbr title="&quot;Conchetumadre&quot;, the Chilean counterpart of &quot;Motherfucker&quot;.">CTM</abbr>" keys across the rows. If you're Chilean, may get the joke.</li>
-<li>The key "a" never moved when switching between one layout and another. Just compare the QWERTY and the DVORAK ones.</li>
-<li>As well-known, vowels are in the 2nd row, and are the first 5 keys there.</li>
-<li>There's no a <abbr title="Latin American (Spanish, of course).">Latam</abbr> variant for the Dvorak Keyboard... <a href="https://github.com/flobosg/latam-dvorak">yet</a>.</li>
-<li>And yes... indeed, typing is faster than QWERTY.</li>
-<li>If you want to try this layout, try to do it when you have some free time.</li>
-<li><abbr title="GRand Unified Boot. The bootloader for GNU/Linux.">GRUB</abbr> only works with QWERTY... unless I may do some some tweak.</li>
-<li>Now I'm clumsy at re-using a QWERTY keyboard when available. Yes, it's something I have to deal. You know, everything moves around the QWERTY one.</li>
-<li>The "XD" emoticon requires some elongation in the fingers. But nothing impossible to do.</li>
-<li>Dvorak is for hipsters. QWERTY? Too mainstream!</li>
-</ul>
-<p>So if you want to try a Dvorak layout, may not regret that. But try to not forget what learned with QWERTY, because you'll need it in some time in the (not so far) future.</p>
+    <p><img alt="GTK+" src="http://jorgicio.github.io/images/gtk.png" /></p>
+<p>As a <a href="http://www.funtoo.org">Funtoo</a> user, and as a <a href="http://www.mate-desktop.org/">MATE</a> user, I had to deal with a problem with GTK+3-based apps when I have windows composition enabled, because popup windows are not drawn correctly. The reason? <a href="https://blogs.gnome.org/mclasen/2013/12/05/client-side-decorations-in-themes/">CSD</a>.</p>
+<p>__C__lient-__S__ide __D__ecorations is the new feature brought by GTK+3 since 3.12, that includes its own windows composition. The problem? It cannot disabled by default, unless you can do some tricks. The <a href="https://gist.github.com/mlny/13c2597695ea2a91a5a8">CSS tweak</a> doesn't work as well as we wish.</p>
+<p>While surfing through the Internet, I found <a href="https://aur.archlinux.org/packages/gtk3-noforcedcsd/">that package</a> in the AUR repository (from Arch Linux), from which I took 2 files that are useful for me.</p>
+<p>Luckily, the GTK 3.0 ebuild for Gentoo (and based ones) contains the epatch_user instruction, so we can just put our own patches, and let Emerge do the rest of the part. </p>
+<p><em><strong>Note:</strong> If you use any other Linux distro, you can do this too, but must patch manually, and re-compile the package from the source. Ask for the way to do for you distro.</em></p>
+<p>First, download <a href="http://www.jorgicio.net/docs/gtk3nocsd/gtk_3.14_disable_csd_envvar_20141001.patch">this patch</a>, and put it inside:</p>
+<p><code>/etc/portage/x11-misc/gtk+:3</code></p>
+<p>Create those directories if not existing.</p>
+<p>Then, recompile the GTK +3 package:</p>
+<p><code>emerge -1 gtk+:3</code></p>
+<p>Don't worry, the patch is applied itself. Just wait.</p>
+<p>Meanwhile, add the right environment variable. You have 2 ways:</p>
+<ol>
+<li>As a system variable, download <a href="http://www.jorgicio.net/docs/gtk3nocsd/gtk3csd.sh">this file</a>, and put it inside <code>/etc/profile.d/</code>. Also, if needed, add execution permissions.</li>
+<li>As a user variable. open the .profile or .xprofile file (create in if not available), and add the following line:
+<code>export GTK_DISABLE_CSD=1</code></li>
+</ol>
+<p>For any of those, restart the session after GTK+ 3 compiled successfully.</p>
+<p>Then, just try open any GTK+ 3 app (i.e. Transmission Torrent Client, Evolution, etc.). I tried with my Funtoo installation, using MATE and window composition enabled.</p>
+<p>As it seems, CSD is a <a href="http://blog.martin-graesslin.com/blog/2010/05/why-you-should-not-use-client-side-window-decorations/">very bad idea</a>.</p>
 <p><em>Jorgicio</em></p>
+<p>P.S. This tutorial is also available in the <a href="http://forums.funtoo.org/topic/576-disable-gtk-3-csd-in-non-gtk3-desktops-eg-mate-or-xfce">Funtoo Forums</a>.</p>
   </div>
 
 
@@ -107,9 +106,9 @@
       <div id="disqus_thread"></div>
       <script type="text/javascript">
         var disqus_shortname = 'jorgicioscrib';
-        var disqus_identifier = "living-with-dvorak-the-keyboard.html";
-        var disqus_title = "Living with Dvorak, the keyboard";
-        var disqus_url = "http://jorgicio.github.io/living-with-dvorak-the-keyboard.html";
+        var disqus_identifier = "disable-gtk+-3-csd-in-non-gtk+3-desktops.html";
+        var disqus_title = "Disable GTK+ 3 CSD in non-GTK+3 desktops (e.g. MATE or XFCE)";
+        var disqus_url = "http://jorgicio.github.io/disable-gtk+-3-csd-in-non-gtk+3-desktops.html";
         (function() {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
           dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
@@ -124,7 +123,7 @@
             <div class="span3">
   <div class="well">
 
-    <p><abbr class="fa fa-calendar" title="2015-05-02T12:23:10-03:00"> Sat, 02 May 2015</abbr></p>
+    <p><abbr class="fa fa-calendar" title="2015-06-07T20:19:00-03:00"> Sun, 07 Jun 2015</abbr></p>
 
       <p><address class="fa fa-user"> By <a href="http://jorgicio.github.io/author/jorgicio.html" rel="author">Jorgicio</a></address></p>
 
@@ -132,24 +131,29 @@
     <hr/>
 
       <p>
-              <a href="http://jorgicio.github.io/category/informatics.html" rel="tag tooltip" class="label label-info" data-placement="right" data-original-title="1 article in this category">informatics</a>
-            <a href="/tag/keyboard.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">keyboard</a>
-            <a href="/tag/qwerty.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">qwerty</a>
-            <a href="/tag/dvorak.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">dvorak</a>
+              <a href="http://jorgicio.github.io/category/linux.html" rel="tag tooltip" class="label label-info" data-placement="right" data-original-title="1 article in this category">linux</a>
+            <a href="/tag/linux.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">linux</a>
+            <a href="/tag/csd.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">csd</a>
+            <a href="/tag/gtk.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">gtk</a>
+            <a href="/tag/gentoo.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">gentoo</a>
+            <a href="/tag/funtoo.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">funtoo</a>
+            <a href="/tag/compilation.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">compilation</a>
+            <a href="/tag/gnome.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">gnome</a>
+            <a href="/tag/mate-desktop.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">mate desktop</a>
       </p>
       <hr/>
 <section>
     <p id="post-share-links">
         Share on:
-        <a href="https://sharetodiaspora.github.io/?title=Living%20with%20Dvorak%2C%20the%20keyboard&url=http%3A//jorgicio.github.io/living-with-dvorak-the-keyboard.html" target="_blank" title="Share on Diaspora">Diaspora*</a>
+        <a href="https://sharetodiaspora.github.io/?title=Disable%20GTK%2B%203%20CSD%20in%20non-GTK%2B3%20desktops%20%28e.g.%20MATE%20or%20XFCE%29&url=http%3A//jorgicio.github.io/disable-gtk%2B-3-csd-in-non-gtk%2B3-desktops.html" target="_blank" title="Share on Diaspora">Diaspora*</a>
         ❄
-        <a href="http://twitter.com/home?status=Living%20with%20Dvorak%2C%20the%20keyboard%20http%3A//jorgicio.github.io/living-with-dvorak-the-keyboard.html" target="_blank" title="Share on Twitter">Twitter</a>
+        <a href="http://twitter.com/home?status=Disable%20GTK%2B%203%20CSD%20in%20non-GTK%2B3%20desktops%20%28e.g.%20MATE%20or%20XFCE%29%20http%3A//jorgicio.github.io/disable-gtk%2B-3-csd-in-non-gtk%2B3-desktops.html" target="_blank" title="Share on Twitter">Twitter</a>
         ❄
-        <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=http%3A//jorgicio.github.io/living-with-dvorak-the-keyboard.html" target="_blank" title="Share on Facebook">Facebook</a>
+        <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=http%3A//jorgicio.github.io/disable-gtk%2B-3-csd-in-non-gtk%2B3-desktops.html" target="_blank" title="Share on Facebook">Facebook</a>
         ❄
-        <a href="https://plus.google.com/share?url=http%3A//jorgicio.github.io/living-with-dvorak-the-keyboard.html" target="_blank" title="Share on Google Plus">Google+</a>
+        <a href="https://plus.google.com/share?url=http%3A//jorgicio.github.io/disable-gtk%2B-3-csd-in-non-gtk%2B3-desktops.html" target="_blank" title="Share on Google Plus">Google+</a>
         ❄
-        <a href="mailto:?subject=Living%20with%20Dvorak%2C%20the%20keyboard&amp;body=http%3A//jorgicio.github.io/living-with-dvorak-the-keyboard.html" target="_blank" title="Share via Email">Email</a>
+        <a href="mailto:?subject=Disable%20GTK%2B%203%20CSD%20in%20non-GTK%2B3%20desktops%20%28e.g.%20MATE%20or%20XFCE%29&amp;body=http%3A//jorgicio.github.io/disable-gtk%2B-3-csd-in-non-gtk%2B3-desktops.html" target="_blank" title="Share via Email">Email</a>
     </p>
 </section>
 
@@ -207,7 +211,7 @@
             <h5>Browse content by</h5>
             <ul class="fa-ul">
 
-                <li><a href="http://jorgicio.github.io/feeds/informatics.atom.xml"><i class="fa-li fa fa-rss"></i> Feed</a></li>
+                <li><a href="http://jorgicio.github.io/feeds/linux.atom.xml"><i class="fa-li fa fa-rss"></i> Feed</a></li>
             </ul>
           </div>
 
