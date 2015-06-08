@@ -6,7 +6,7 @@
 &lt;p&gt;Luckily, the GTK 3.0 ebuild for Gentoo (and based ones) contains the epatch_user instruction, so we can just put our own patches, and let Emerge do the rest of the part. &lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you use any other Linux distro, you can do this too, but must patch manually, and re-compile the package from the source. Ask for the way to do for you distro.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;First, download &lt;a href="http://www.jorgicio.net/docs/gtk3nocsd/gtk_3.14_disable_csd_envvar_20141001.patch"&gt;this patch&lt;/a&gt;, and put it inside:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;/etc/portage/x11-misc/gtk+:3/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/etc/portage/x11-libs/gtk+:3/&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Create those directories if not existing.&lt;/p&gt;
 &lt;p&gt;Then, recompile the GTK +3 package:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;emerge -1 gtk+:3&lt;/code&gt;&lt;/p&gt;
@@ -14,7 +14,7 @@
 &lt;p&gt;Meanwhile, add the right environment variable. You have 2 ways:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;As a system variable, download &lt;a href="http://www.jorgicio.net/docs/gtk3nocsd/gtk3csd.sh"&gt;this file&lt;/a&gt;, and put it inside &lt;code&gt;/etc/profile.d/&lt;/code&gt;. Also, if needed, add execution permissions.&lt;/li&gt;
-&lt;li&gt;As a user variable. open the .profile or .xprofile file (create it if not available), and add the following line:
+&lt;li&gt;As an user variable. open the .profile or .xprofile file (create it if not available), and add the following line:
 &lt;code&gt;export GTK_DISABLE_CSD=1&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;For any of those, restart the session after GTK+ 3 compiled successfully.&lt;/p&gt;
