@@ -2,81 +2,137 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>  Disable GTK+ 3 CSD in non-GTK+3 desktops (e.g. MATE or XFCE)
  | Jorgicio's Crib</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="author" content=""/>
+    <meta name="author" content="Jorgicio"/>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.min.css"/>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.magnific-popup/0.9.9/magnific-popup.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"/>
     <link rel="stylesheet" href="http://jorgicio.github.io/theme/css/jquery.mglass.css"/>
     <link rel="stylesheet" href="http://jorgicio.github.io/theme/css/pygment-solarized-dark.css"/>
     <link rel="stylesheet" href="http://jorgicio.github.io/theme/css/style.css"/>
 
     <!-- Fonts -->
-    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-    <link href='//fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'/>
-    <link href='//fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'/>
 
 
     <link rel="icon" href="http://jorgicio.github.io/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="http://jorgicio.github.io/favicon.ico" type="image/x-icon">
 
     <!-- Feeds -->
-      <link href="http://jorgicio.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jorgicio&#39;s Crib Full Atom Feed"/>
-      <link href="http://jorgicio.github.io/feeds/linux.atom.xml" type="application/atom+xml" rel="alternate" title="Jorgicio&#39;s Crib Categories Atom Feed"/>
+      <link href="http://jorgicio.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jorgicio&#39;s Crib - All posts - Atom Feed"/>
+      <link href="http://jorgicio.github.io/feeds/linux.atom.xml" type="application/atom+xml" rel="alternate" title="Jorgicio&#39;s Crib - Category: linux - Atom Feed"/>
 
 
   </head>
 
   <body>
+
     <div class="container">
 
-      <header>
-        <div class="page-header">
-            <a href="http://jorgicio.github.io" class="avatar-container">
-              <div class="avatar ">
-                <div class="side"><img src="avatar.png"/></div>
-              </div>
-            </a>
-          <h1><a href="http://jorgicio.github.io">Jorgicio's Crib</a> <small>The blog of the blogs</small></h1>
+      <div class="page-header">
+          <a href="http://jorgicio.github.io" class="avatar-container pull-left">
+            <div class="avatar ">
+              <div class="side"><img src="avatar.png" class="img-responsive"/></div>
+            </div>
+          </a>
+        <h1><a href="http://jorgicio.github.io">Jorgicio's Crib</a> <small>The blog of the blogs</small></h1>
+      </div>
+
+      <nav class="navbar navbar-default">
+
+        <!-- Hamburger menu for mobile -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#plumage-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://jorgicio.github.io" title="The blog of the blogs">Jorgicio's Crib</a>
         </div>
 
-        <div class="navbar">
-          <div class="navbar-inner">
-            <a class="brand" href="http://jorgicio.github.io" title="The blog of the blogs">Jorgicio's Crib</a>
-            <ul class="nav">
-                  <li ><a href="http://jorgicio.github.io/pages/about-me.html">About me</a></li>
-                  <li ><a href="http://jorgicio.github.io/pages/contact.html">Contact me!</a></li>
-                  <li ><a href="http://jorgicio.github.io/pages/suscribe.html">Suscribe!</a></li>
-            </ul>
-          </div>
+        <!-- Menus and search forms -->
+        <div class="collapse navbar-collapse" id="plumage-navbar-collapse-1">
+
+          <ul class="nav navbar-nav">
+<li >
+                  <a href="http://jorgicio.github.io/pages/about-me.html">About me</a>
+                </li>
+<li >
+                  <a href="http://jorgicio.github.io/pages/contact.html">Contact me!</a>
+                </li>
+<li >
+                  <a href="http://jorgicio.github.io/pages/suscribe.html">Suscribe!</a>
+                </li>
+<li >
+                  <a href="http://jorgicio.github.io/category/fables.html">fables</a>
+                </li>
+<li >
+                  <a href="http://jorgicio.github.io/category/informatics.html">informatics</a>
+                </li>
+<li >
+                  <a href="http://jorgicio.github.io/category/lgbt.html">lgbt</a>
+                </li>
+<li  class="active" >
+                  <a href="http://jorgicio.github.io/category/linux.html">linux <span class="sr-only">(current)</span></a>
+                </li>
+<li >
+                  <a href="http://jorgicio.github.io/category/news.html">news</a>
+                </li>
+<li >
+                  <a href="http://jorgicio.github.io/category/personal.html">personal</a>
+                </li>
+<li >
+                  <a href="http://jorgicio.github.io/category/social-networks.html">social networks</a>
+                </li>
+<li >
+                  <a href="http://jorgicio.github.io/category/society.html">society</a>
+                </li>
+<li >
+                  <a href="http://jorgicio.github.io/category/sports.html">sports</a>
+                </li>
+<li >
+                  <a href="http://jorgicio.github.io/category/videos.html">videos</a>
+                </li>
+          </ul>
+
+
+
         </div>
-      </header>
 
-      <section>
+      </nav>
 
-        <div class="row">
-          <div class=" span9  ">
+    </div>
+
+
+    <div class="container main">
+
+
+      <div class="row">
+        <div class=" col-md-9  ">
   <h1>
     <a href="http://jorgicio.github.io/disable-gtk+-3-csd-in-non-gtk+3-desktops.html" rel="bookmark" title="Permalink to Disable GTK+ 3 CSD in non-GTK+3 desktops (e.g. MATE or XFCE)">Disable GTK+ 3 CSD in non-GTK+3 desktops (e.g. MATE or XFCE)</a>
   </h1>
-          </div>
         </div>
+      </div>
 
-        <div class="row">
+      <div class="row">
 
 
-          <div class=" span9 " id="content" role="main">
+        <div class=" col-md-9 " id="content" role="main">
   
 
   <div>
-    <p><img alt="GTK+" src="http://jorgicio.github.io/images/gtk.png" /></p>
+    <p><img alt="GTK+" src="http://jorgicio.github.io/images/gtk.png"></p>
 <p>As a <a href="http://www.funtoo.org">Funtoo</a> user, and as a <a href="http://www.mate-desktop.org/">MATE</a> user, I had to deal with a problem with GTK+3-based apps when I have windows composition enabled, because popup windows are not drawn correctly. The reason? <a href="https://blogs.gnome.org/mclasen/2013/12/05/client-side-decorations-in-themes/">CSD</a>.</p>
 <p><strong>C</strong>lient-<strong>S</strong>ide <strong>D</strong>ecorations is the new feature brought by GTK+3 since 3.12, that includes its own windows composition. The problem? It cannot be disabled by default, unless you can do some tricks. The <a href="https://gist.github.com/mlny/13c2597695ea2a91a5a8">CSS tweak</a> doesn't work as well as we wish.</p>
 <p>While surfing through the Internet, I found <a href="https://aur.archlinux.org/packages/gtk3-noforcedcsd/">that package</a> in the AUR repository (from Arch Linux), from which I took 2 files that are useful for me.</p>
@@ -111,45 +167,65 @@
         var disqus_url = "http://jorgicio.github.io/disable-gtk+-3-csd-in-non-gtk+3-desktops.html";
         (function() {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
       </script>
-      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus</a>.</noscript>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus</a>.</noscript>
     </div>
 
-          </div>
+        </div>
 
-            <div class="span3">
+          <div class="col-md-3">
   <div class="well">
 
-    <p><abbr class="fa fa-calendar" title="2015-06-07T20:19:00-03:00"> Sun, 07 Jun 2015</abbr></p>
+    <p><abbr title="2015-06-07T20:19:00-03:00"><i class="fa fa-calendar"></i> Sun, 07 Jun 2015</abbr></p>
 
-      <p><address class="fa fa-user"> By <a href="http://jorgicio.github.io/author/jorgicio.html" rel="author">Jorgicio</a></address></p>
-
+      <p><address>
+        <i class="fa fa-user"></i> By
+          <a href="http://jorgicio.github.io/author/jorgicio.html" rel="author">Jorgicio</a>
+      </address></p>
 
     <hr/>
 
       <p>
-              <a href="http://jorgicio.github.io/category/linux.html" rel="tag tooltip" class="label label-info" data-placement="right" data-original-title="1 article in this category">linux</a>
-            <a href="/tag/linux.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">linux</a>
-            <a href="/tag/gentoo.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">gentoo</a>
-            <a href="/tag/csd.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">csd</a>
-            <a href="/tag/gtk.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">gtk</a>
-            <a href="/tag/funtoo.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">funtoo</a>
-            <a href="/tag/compilation.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">compilation</a>
-            <a href="/tag/gnome.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">gnome</a>
-            <a href="/tag/mate-desktop.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">mate desktop</a>
+              <a href="http://jorgicio.github.io/category/linux.html" rel="tag"
+                  data-toggle="tooltip" class="label label-info"
+                  title="1 article in this category">linux</a>
+            <a href="/tag/linux.html" data-toggle="tooltip"
+      class="label label-default"
+      title="1 article with this tag">linux</a>
+            <a href="/tag/gentoo.html" data-toggle="tooltip"
+      class="label label-default"
+      title="1 article with this tag">gentoo</a>
+            <a href="/tag/csd.html" data-toggle="tooltip"
+      class="label label-default"
+      title="1 article with this tag">csd</a>
+            <a href="/tag/gtk.html" data-toggle="tooltip"
+      class="label label-default"
+      title="1 article with this tag">gtk</a>
+            <a href="/tag/funtoo.html" data-toggle="tooltip"
+      class="label label-default"
+      title="1 article with this tag">funtoo</a>
+            <a href="/tag/compilation.html" data-toggle="tooltip"
+      class="label label-default"
+      title="1 article with this tag">compilation</a>
+            <a href="/tag/gnome.html" data-toggle="tooltip"
+      class="label label-default"
+      title="1 article with this tag">gnome</a>
+            <a href="/tag/mate-desktop.html" data-toggle="tooltip"
+      class="label label-default"
+      title="1 article with this tag">mate desktop</a>
       </p>
       <hr/>
 
 
-  </div>
-              
-            </div>
 
-        </div>
-      </section>
+  </div>
+            
+          </div>
+
+      </div>
 
     </div>
 
@@ -158,9 +234,9 @@
       <div class="container">
         <div class="row">
 
-            <div class="span2">
+            <div class="col-md-2">
                 <h5>Social</h5>
-                <ul class="unstyled">
+                <ul class="list-unstyled">
                   <li>  <a href="http://twitter.com/jorgicio">
       <i class="fa fa-twitter"></i>
     Twitter
@@ -174,64 +250,68 @@
     Github
   </a></li>
                   <li>  <a href="http://last.fm/user/jorgicio">
-      <img src="http://g.etfv.co/http://last.fm?defaulticon=lightpng" width="16" height="16" class="icon" alt="last.fm icon"/>
+      <img src="https://icons.better-idea.org/icon?url=last.fm&size=16" width="16" height="16" class="icon" alt="last.fm icon"/>
     Last FM
   </a></li>
                 </ul>
             </div>
-            <div class="span2">
+            <div class="col-md-2">
                 <h5>Links</h5>
-                <ul class="unstyled">
+                <ul class="list-unstyled">
                   <li>  <a href="http://www.jorgicio.net">
-      <img src="http://g.etfv.co/http://www.jorgicio.net?defaulticon=lightpng" width="16" height="16" class="icon" alt="www.jorgicio.net icon"/>
+      <img src="https://icons.better-idea.org/icon?url=www.jorgicio.net&size=16" width="16" height="16" class="icon" alt="www.jorgicio.net icon"/>
     Personal Website
   </a></li>
                   <li>  <a href="http://blog.jorgicio.net">
-      <img src="http://g.etfv.co/http://blog.jorgicio.net?defaulticon=lightpng" width="16" height="16" class="icon" alt="blog.jorgicio.net icon"/>
+      <img src="https://icons.better-idea.org/icon?url=blog.jorgicio.net&size=16" width="16" height="16" class="icon" alt="blog.jorgicio.net icon"/>
     My other blog (in Spanish!)
   </a></li>
                 </ul>
             </div>
 
-          <div class="span2">
+          <div class="col-md-2">
             <h5>Browse content by</h5>
-            <ul class="fa-ul">
-
-                <li><a href="http://jorgicio.github.io/feeds/linux.atom.xml"><i class="fa-li fa fa-rss"></i> Feed</a></li>
+            <ul class="list-unstyled">
             </ul>
           </div>
 
-          <div class="span2 muted">
+          <div class="col-md-2 text-muted">
             <h5>Copyright notice</h5>
             <p>© Copyright 2015 Jorgicio.</p>
           </div>
 
-          <div class="span2 muted">
+          <div class="col-md-2 text-muted">
             <h5>Disclaimer</h5>
               <p>Anyway, everything I write here, is my responsability. Not what all of you understand. This is NOT the translation of my other blog, which is entirely in Spanish.</p>
           </div>
 
-          <div class="span2">
-            <h5 class="pull-right"><a href="#" class="fa fa-arrow-up"> Back to top</a></h5>
+          <div class="col-md-2">
+              <h5>Feeds</h5>
+              <ul class="list-unstyled">
+                  <li><small><a href="http://jorgicio.github.io/feeds/all.atom.xml"><i class="fa fa-rss"></i> All posts (Atom)</a></small></li>
+                  <li><small><a href="http://jorgicio.github.io/feeds/linux.atom.xml"><i class="fa fa-rss"></i> Category: linux (Atom)</a></small></li>
+              </ul>
           </div>
 
         </div>
       </div>
 
+      <h5 class="text-right"><a href="#"><i class="fa fa-arrow-up"></i> Back to top</a></h5>
+
       <div class="container">
-        <div class="row span12 muted text-center">
-          Site generated by <a href="http://getpelican.com"> Pelican</a>.<br/>
-          <a href="https://github.com/kdeldycke/plumage"> Plumage</a> theme by <a href="http://kevin.deldycke.com">Kevin Deldycke</a>.
+        <div class="row col-md-12 text-muted text-center">
+          Site generated by <a href="https://getpelican.com"> Pelican</a>.<br/>
+          <a href="https://github.com/kdeldycke/plumage"> Plumage</a> theme by <a href="https://kevin.deldycke.com">Kevin Deldycke</a>.
         </div>
       </div>
 
     </footer>
 
 
-    <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-    <script src="//cdn.jsdelivr.net/jquery.magnific-popup/0.9.9/jquery.magnific-popup.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
     <script src="http://jorgicio.github.io/theme/js/jquery.mglass.js"></script>
     <script src="http://jorgicio.github.io/theme/js/application.js"></script>
 

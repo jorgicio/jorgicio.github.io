@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jorgicio's Crib</title><link href="http://jorgicio.github.io/" rel="alternate"></link><link href="http://jorgicio.github.io/feeds/social-networks.atom.xml" rel="self"></link><id>http://jorgicio.github.io/</id><updated>2015-05-02T02:23:10-03:00</updated><entry><title>To copy, or not to copy</title><link href="http://jorgicio.github.io/to-copy-or-not-to-copy.html" rel="alternate"></link><updated>2015-05-02T02:23:10-03:00</updated><author><name>Jorgicio</name></author><id>tag:jorgicio.github.io,2015-05-02:to-copy-or-not-to-copy.html</id><summary type="html">&lt;p&gt;Well, as a summary:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jorgicio's Crib - social networks</title><link href="http://jorgicio.github.io/" rel="alternate"></link><link href="http://jorgicio.github.io/feeds/social-networks.atom.xml" rel="self"></link><id>http://jorgicio.github.io/</id><updated>2015-05-02T02:23:10-03:00</updated><entry><title>To copy, or not to copy</title><link href="http://jorgicio.github.io/to-copy-or-not-to-copy.html" rel="alternate"></link><published>2015-05-02T02:23:10-03:00</published><updated>2015-05-02T02:23:10-03:00</updated><author><name>Jorgicio</name></author><id>tag:jorgicio.github.io,2015-05-02:/to-copy-or-not-to-copy.html</id><summary type="html">&lt;p&gt;Take care about copying some content. Also: spread the wor(l)d!&lt;/p&gt;</summary><content type="html">&lt;p&gt;Well, as a summary:&lt;/p&gt;
 &lt;p&gt;Some days ago, in my &lt;a href="http://www.usm.cl"&gt;university&lt;/a&gt;, a &lt;a href="https://www.facebook.com/permalink.php?story_fbid=911119055615127&amp;amp;id=145847642142276"&gt;statement&lt;/a&gt; published on Facebook accused some students to copy a homework for a course called Programming (&lt;em&gt;Programación&lt;/em&gt;, as its original name), and if all involved people doesn't pronounce before April 30th, goes to the universitary committee. Rules and stuff.&lt;/p&gt;
 &lt;p&gt;I think that if anybody copies something, there's no problem if gives some credit for that. Anyways, everybody does it. But neither is for doing it shamelessly. Wisdom must be transmitted to everybody; but if not, it dies.&lt;/p&gt;
 &lt;p&gt;Some people has not something better to do as of punish someone for just copying something, and not for something worse.&lt;/p&gt;
 &lt;p&gt;Curiously: my career supports, in part, the opensource.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Jorgicio&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;PS: Note that the statement is in Spanish.&lt;br /&gt;
-PS 2: &lt;em&gt;Programming&lt;/em&gt; is for 1st year students. And it's in Python.&lt;/p&gt;</summary><category term="copyright"></category></entry><entry><title>#Fifigate, or the importance of the security in the Social Media</title><link href="http://jorgicio.github.io/fifigate-or-the-importance-of-the-security-in-social-media.html" rel="alternate"></link><updated>2015-04-16T00:14:10-03:00</updated><author><name>Jorgicio</name></author><id>tag:jorgicio.github.io,2015-04-16:fifigate-or-the-importance-of-the-security-in-social-media.html</id><summary type="html">&lt;figure&gt;
+&lt;p&gt;PS: Note that the statement is in Spanish.&lt;br&gt;
+PS 2: &lt;em&gt;Programming&lt;/em&gt; is for 1st year students. And it's in Python.&lt;/p&gt;</content><category term="copyright"></category></entry><entry><title>#Fifigate, or the importance of the security in the Social Media</title><link href="http://jorgicio.github.io/fifigate-or-the-importance-of-the-security-in-social-media.html" rel="alternate"></link><published>2015-04-16T00:14:10-03:00</published><updated>2015-04-16T00:14:10-03:00</updated><author><name>Jorgicio</name></author><id>tag:jorgicio.github.io,2015-04-16:/fifigate-or-the-importance-of-the-security-in-social-media.html</id><summary type="html">&lt;p&gt;Take care of friends you are with, and keeping the privacity.&lt;/p&gt;</summary><content type="html">&lt;figure&gt;
 &lt;img src="http://jorgicio.github.io/images/fifi.png" title="Dafuq?" /&gt;
 &lt;figcaption&gt;Ok, this is not what I mean; but at least, it's a little bit innocent. &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -15,13 +15,13 @@ PS 2: &lt;em&gt;Programming&lt;/em&gt; is for 1st year students. And it's in Pyt
 &lt;p&gt;Well... as I understood, she mistook on trust her so-called "friends". Supposedly, she trusted her passwords, and it may be the root of the leakage.&lt;/p&gt;
 &lt;p&gt;Some years ago, I started to learn the concept of &lt;a href="https://en.wikipedia.org/wiki/Social_engineering_(security)"&gt;social engineering&lt;/a&gt;. A sort of psychological way to get information from another people. It also could be the cause of the incident of the Wena Naty, ocurred in 2007.&lt;/p&gt;
 &lt;p&gt;Well, I could not had a personal opinion about this until some closer people, as such as a relative (or the Fifi herself, as a preference), speaks about the situation. As happened with a Paloma, a Fifi relative (not specified who is), who sent a letter what's read by Nicolás Copano. Unfortunately, the audio is in Spanish, and there's no subs. Anyway, I leave it here.&lt;/p&gt;
-&lt;p&gt;&lt;div class="videobox"&gt;
+&lt;p&gt;&lt;span class="videobox"&gt;
                 &lt;iframe width="320" height="240"
                     src='https://www.youtube.com/embed/8WR62e8OFkk'
                     frameborder='0' webkitAllowFullScreen mozallowfullscreen
                     allowFullScreen&gt;
                 &lt;/iframe&gt;
-            &lt;/div&gt;&lt;/p&gt;
+            &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;What did I learn about that?&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Don't trust some confidential information to anybody.&lt;/li&gt;
@@ -31,4 +31,4 @@ PS 2: &lt;em&gt;Programming&lt;/em&gt; is for 1st year students. And it's in Pyt
 &lt;li&gt;Watch out about file permissions.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Also, another thing I want to comment, is about morbid interest in that topic. Taking videos or photos doing some intimate or sexual acts, doesn't turn that person a whore, if commited to that. If leakage is done by third parties, it's not necessarily her fault. Also, the subject is sensitive because all people involved in that incident, are underage, at least in Chile. So please, stop morbid interests at sharing or storaging the video. It can also be an illicit act. Respect Fifi, and leave her alone.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Jorgicio&lt;/em&gt;&lt;/p&gt;</summary><category term="fifi"></category><category term="social networks"></category><category term="porn"></category><category term="social media"></category><category term="leakage"></category><category term="computer science"></category></entry></feed>
+&lt;p&gt;&lt;em&gt;Jorgicio&lt;/em&gt;&lt;/p&gt;</content><category term="fifi"></category><category term="social networks"></category><category term="porn"></category><category term="social media"></category><category term="leakage"></category><category term="computer science"></category></entry></feed>
