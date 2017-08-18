@@ -31,7 +31,7 @@ openrc-shutdown -p&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;chmod +x ck-system-stop
 chmod +x ck-system-reboot&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;And you can copy them into the &lt;code&gt;/usr/lib/consolekit/scripts&lt;/code&gt; directory. Don't worry, permissions will remain.&lt;/p&gt;
-&lt;p&gt;Now you just reboot the system and you're ready.&lt;/p&gt;
+&lt;p&gt;Now just reboot the system and you're ready.&lt;/p&gt;
 &lt;p&gt;I hope this may be helpful for every one who uses OpenRC as its init system.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Jorgicio&lt;/em&gt;&lt;/p&gt;</content><category term="linux"></category><category term="gentoo"></category></entry><entry><title>Back from the break</title><link href="http://jorgicio.github.io/back-from-the-break.html" rel="alternate"></link><published>2017-05-10T00:06:00-03:00</published><updated>2017-05-10T00:06:00-03:00</updated><author><name>Jorgicio</name></author><id>tag:jorgicio.github.io,2017-05-10:/back-from-the-break.html</id><summary type="html">&lt;p&gt;Yes, folks, I'm back!&lt;/p&gt;</summary><content type="html">&lt;p&gt;Yes, as you noticed, I'm back here, and it was a long while since the last time I was here.
 I had kinda "writer's block" because as you may know, English is not my mother tongue, and I maintain two blogs (the &lt;a href="http://blog.jorgicio.net"&gt;other one&lt;/a&gt;, in my native Spanish, is what I use more, but I promise will spend more time here to practice my English!) Also, I had some troubles to rework this blog because of &lt;a href="http://getpelican.com"&gt;Pelican&lt;/a&gt; compatibility problems with previous versions.&lt;/p&gt;

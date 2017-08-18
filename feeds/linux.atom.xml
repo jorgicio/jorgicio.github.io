@@ -31,7 +31,7 @@ openrc-shutdown -p&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;chmod +x ck-system-stop
 chmod +x ck-system-reboot&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;And you can copy them into the &lt;code&gt;/usr/lib/consolekit/scripts&lt;/code&gt; directory. Don't worry, permissions will remain.&lt;/p&gt;
-&lt;p&gt;Now you just reboot the system and you're ready.&lt;/p&gt;
+&lt;p&gt;Now just reboot the system and you're ready.&lt;/p&gt;
 &lt;p&gt;I hope this may be helpful for every one who uses OpenRC as its init system.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Jorgicio&lt;/em&gt;&lt;/p&gt;</content><category term="linux"></category><category term="gentoo"></category></entry><entry><title>Disable GTK+ 3 CSD in non-GTK+3 desktops (e.g. MATE or XFCE)</title><link href="http://jorgicio.github.io/disable-gtk+-3-csd-in-non-gtk+3-desktops.html" rel="alternate"></link><published>2015-06-07T20:19:00-03:00</published><updated>2015-06-07T20:19:00-03:00</updated><author><name>Jorgicio</name></author><id>tag:jorgicio.github.io,2015-06-07:/disable-gtk+-3-csd-in-non-gtk+3-desktops.html</id><summary type="html">&lt;p&gt;How to ride with this crap called CSD.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="GTK+" src="http://jorgicio.github.io/images/gtk.png"&gt;&lt;/p&gt;
 &lt;p&gt;As a &lt;a href="http://www.funtoo.org"&gt;Funtoo&lt;/a&gt; user, and as a &lt;a href="http://www.mate-desktop.org/"&gt;MATE&lt;/a&gt; user, I had to deal with a problem with GTK+3-based apps when I have windows composition enabled, because popup windows are not drawn correctly. The reason? &lt;a href="https://blogs.gnome.org/mclasen/2013/12/05/client-side-decorations-in-themes/"&gt;CSD&lt;/a&gt;.&lt;/p&gt;
