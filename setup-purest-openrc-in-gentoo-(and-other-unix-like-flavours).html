@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>  USA says YES, and the proud of being gay
+    <title>  Setup purest OpenRC in Gentoo (and other Unix-like flavours)
  | Jorgicio's Crib</title>
 
     <meta name="author" content="Jorgicio"/>
@@ -29,7 +29,7 @@
 
     <!-- Feeds -->
       <link href="http://jorgicio.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jorgicio&#39;s Crib - All posts - Atom Feed"/>
-      <link href="http://jorgicio.github.io/feeds/lgbt.atom.xml" type="application/atom+xml" rel="alternate" title="Jorgicio&#39;s Crib - Category: lgbt - Atom Feed"/>
+      <link href="http://jorgicio.github.io/feeds/linux.atom.xml" type="application/atom+xml" rel="alternate" title="Jorgicio&#39;s Crib - Category: linux - Atom Feed"/>
 
 
   </head>
@@ -79,11 +79,11 @@
 <li >
                   <a href="./category/informatics.html">informatics</a>
                 </li>
-<li  class="active" >
-                  <a href="./category/lgbt.html">lgbt <span class="sr-only">(current)</span></a>
-                </li>
 <li >
-                  <a href="./category/linux.html">linux</a>
+                  <a href="./category/lgbt.html">lgbt</a>
+                </li>
+<li  class="active" >
+                  <a href="./category/linux.html">linux <span class="sr-only">(current)</span></a>
                 </li>
 <li >
                   <a href="./category/news.html">news</a>
@@ -120,7 +120,7 @@
       <div class="row">
         <div class=" col-md-9  ">
   <h1>
-    <a href="./usa-says-yes-and-the-proud-of-being-gay.html" rel="bookmark" title="Permalink to USA says YES, and the proud of being gay">USA says YES, and the proud of being gay</a>
+    <a href="./setup-purest-openrc-in-gentoo-(and-other-unix-like-flavours).html" rel="bookmark" title="Permalink to Setup purest OpenRC in Gentoo (and other Unix-like flavours)">Setup purest OpenRC in Gentoo (and other Unix-like flavours)</a>
   </h1>
         </div>
       </div>
@@ -132,36 +132,56 @@
   
 
   <div>
-    <p><img alt="Father loves his gay son" src="./images/niniogay.jpg"></p>
-<p>Translation of the note above:</p>
-<blockquote>
-<p>A FATHER HEARS HIS SON HOW DOES HE TELL HIM HAS A BOYFRIEND. HIS FATHER LEFT THIS NOTE:</p>
-<p>Rubén:</p>
-<p>Last night I heard the conversation you had with Miguel talking about your plans to tell me you're gay. The only thing you have to plan is to bring the bread when you come out from school, we're out (like you, now).</p>
-<p>I learned you were gay since you were 6 and I had loved you since you were born.</p>
-<p>P.S.: Your mother and me think Miguel and you make a nice couple.</p>
-</blockquote>
-<p>True love knows neither about gender nor anything else. In USA, marriages for everyone are nationwide since June 26th, being same-sex or not. True love won.</p>
-<p>With that, also comes the support the LGBT marriages as a fashionable topic. I mean all those rainbow-tainted images in lots of avatars on social networks. Specially here in Chile. How ridiculous look all of those ones! You better celebrate when this happens here!</p>
-<p>Of course, I agree all people who want to marry do it whether they're the same gender or not, no matter who are. But I don't have to brag about it. Why I'd have to?</p>
-<p>Anyway, congrats, USA.</p>
+    <p><img alt="OpenRC" src="./images/openrc.jpg"></p>
+<p>As some people know, I'm a Gentoo user since some years ago. And as anybody knows, SystemD is a sort of crap and there <a href="http://without-systemd.org/wiki/index.php/Arguments_against_systemd">lots for of reasons why</a>. And one of the best alternatives (or the best alternative) is <a href="http://en.wikipedia.org/wiki/OpenRC">OpenRC</a>.</p>
+<p>However, I came here to show you how to use a purest OpenRC, even in front-end or back-end.</p>
+<h2>Wait a minute, isn't OpenRC already pure?</h2>
+<p>Not exactly.</p>
+<p>Do you remember the oldie SysVinit? Well, this is the init system used in many Unix-like flavours (and, of course, Linux flavours). And SystemD came as a kinda replace of SysVinit. In fact, the latter is still used by, for example, BSD flavours like FreeBSD, as SystemD can't be non-Linux compatible. Also, Linux distros such as Slackware still use it.</p>
+<p>OpenRC is the default init system used in Gentoo (as well as created by some members of that community), and being available to lots of Linux distros (and other Unix-like OS), only some other ones use it, such as Alpine Linux or Manjaro. Of course, the most complete documentation available for OpenRC is in the <a href="https://wiki.gentoo.org/wiki/OpenRC">Gentoo Wiki</a>.</p>
+<p>Well, one day, I find there you can use an alternative init binary to run it, its own init binary indeed since 0.25 release. And there are the instructions to use it. However, I found that documentation is kinda incomplete and I'll explain you later why.</p>
+<p>You must keep in mind some things before trying that:</p>
+<ul>
+<li>Startup may be slower than usual the first time. Don't worry, that's normal.</li>
+<li>Some binaries, i.e. <code>halt</code> or <code>reboot</code>, are not available because they're SysVinit-based. Instead, there's a new one called <code>openrc-shutdown</code> which is called with an argument to make it what you expected. This will be explained later.</li>
+<li>You must use OpenRC with ConsoleKit, although they already came together. I'll explain it later too.</li>
+<li>The file <code>/etc/inittab</code> is ignored as being part of SysVinit. Instead, the TTYs must be enabled manually using the <code>agetty</code> daemon.</li>
+<li>All the process is painless and reversible.</li>
+</ul>
+<p>Now you've been noticed of the mentioned before, let's start!</p>
+<p>First, you must add the <code>init=/sbin/openrc-init</code> kernel line in your bootloader. I use GRUB, so the process is easy as modify the <code>/etc/default/grub</code> file and then regenerate the config file with <code>grub-mkconfig -o /boot/grub/grub.cfg</code> (depending on your OS or GRUB version).</p>
+<p>Then, you must make the TTYs you're going to use enabled. As the <code>/etc/inittab</code> is not used anymore, you can create a symlink to make it start on boot. You can create as much of symlinks as TTYs you want. For example, for the first TTY, you can do this:</p>
+<p><code>ln -sr /etc/init.d/agetty /etc/init.d/agetty.tty1</code></p>
+<p>And then, make it start in default level:</p>
+<p><code>rc-update add agetty.tty1 default</code></p>
+<p>You can repeat the process with the other TTYs with changing the number in the symlink file and rc-update command.</p>
+<p>Finally, as you're using a Desktop Environment, of course you need ConsoleKit. So let's create some scripts to make it reboot or poweroff. For that, the names must be as indicated by CK and depending on what to do.</p>
+<p>For the first script (which we must be name it <code>ck-system-stop</code>), its content must be this:</p>
+<p><code>#!/bin/sh
+openrc-shutdown -p</code></p>
+<p>The 2nd script we must name <code>ck-system-reboot</code> and the content is the same as the previous one, but the parameter must be <code>-r</code> instead of <code>-p</code>.</p>
+<p>Of course, both scripts must have execution permissions assigned:</p>
+<p><code>chmod +x ck-system-stop
+chmod +x ck-system-reboot</code></p>
+<p>And you can copy them into the <code>/usr/lib/consolekit/scripts</code> directory. Don't worry, permissions will remain.</p>
+<p>Now you just reboot the system and you're ready.</p>
+<p>I hope this may be helpful for every one who uses OpenRC as its init system.</p>
 <p><em>Jorgicio</em></p>
-<p>P.S.: If you're wondering, no, I'm not gay, but supporting LGBT community does NOT make me one of them.</p>
   </div>
 
     <h3>Related content</h3>
     <!-- TODO: Use fancier related layout, as in https://kevin.deldycke.com/2012/04/beautify-contextual-related-posts-wordpress-plugin/ -->
     <ul>
-        <li><a href="./ireland-says-yes.html">Ireland says YES!</a></li>
+        <li><a href="./disable-gtk+-3-csd-in-non-gtk+3-desktops.html">Disable GTK+ 3 CSD in non-GTK+3 desktops (e.g. MATE or XFCE)</a></li>
       </ul>
 
     <div class="comments">
       <div id="disqus_thread"></div>
       <script type="text/javascript">
         var disqus_shortname = 'jorgicioscrib';
-        var disqus_identifier = "usa-says-yes-and-the-proud-of-being-gay.html";
-        var disqus_title = "USA says YES, and the proud of being gay";
-        var disqus_url = "./usa-says-yes-and-the-proud-of-being-gay.html";
+        var disqus_identifier = "setup-purest-openrc-in-gentoo-(and-other-unix-like-flavours).html";
+        var disqus_title = "Setup purest OpenRC in Gentoo (and other Unix-like flavours)";
+        var disqus_url = "./setup-purest-openrc-in-gentoo-(and-other-unix-like-flavours).html";
         (function() {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
           dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
@@ -176,7 +196,7 @@
           <div class="col-md-3">
   <div class="well">
 
-    <p><abbr title="2015-06-29T23:46:00-03:00"><i class="fa fa-calendar"></i> Mon, 29 Jun 2015</abbr></p>
+    <p><abbr title="2017-08-17T22:24:00-03:00"><i class="fa fa-calendar"></i> Thu, 17 Aug 2017</abbr></p>
 
       <p><address>
         <i class="fa fa-user"></i> By
@@ -186,24 +206,15 @@
     <hr/>
 
       <p>
-              <a href="./category/lgbt.html" rel="tag"
+              <a href="./category/linux.html" rel="tag"
                   data-toggle="tooltip" class="label label-info"
-                  title="2 articles in this category">lgbt</a>
-            <a href="/tag/lgbt.html" data-toggle="tooltip"
+                  title="2 articles in this category">linux</a>
+            <a href="/tag/linux.html" data-toggle="tooltip"
       class="label label-default"
-      title="2 articles with this tag">lgbt</a>
-            <a href="/tag/family-love.html" data-toggle="tooltip"
+      title="2 articles with this tag">linux</a>
+            <a href="/tag/gentoo.html" data-toggle="tooltip"
       class="label label-default"
-      title="1 article with this tag">family love</a>
-            <a href="/tag/gay.html" data-toggle="tooltip"
-      class="label label-default"
-      title="1 article with this tag">gay</a>
-            <a href="/tag/usa.html" data-toggle="tooltip"
-      class="label label-default"
-      title="1 article with this tag">usa</a>
-            <a href="/tag/lgbt-rights.html" data-toggle="tooltip"
-      class="label label-default"
-      title="1 article with this tag">lgbt rights</a>
+      title="2 articles with this tag">gentoo</a>
       </p>
       <hr/>
 
@@ -277,7 +288,7 @@
               <h5>Feeds</h5>
               <ul class="list-unstyled">
                   <li><small><a href="http://jorgicio.github.io/feeds/all.atom.xml"><i class="fa fa-rss"></i> All posts (Atom)</a></small></li>
-                  <li><small><a href="http://jorgicio.github.io/feeds/lgbt.atom.xml"><i class="fa fa-rss"></i> Category: lgbt (Atom)</a></small></li>
+                  <li><small><a href="http://jorgicio.github.io/feeds/linux.atom.xml"><i class="fa fa-rss"></i> Category: linux (Atom)</a></small></li>
               </ul>
           </div>
 
